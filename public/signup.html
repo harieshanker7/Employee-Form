@@ -1,0 +1,312 @@
+<!-- Updated HTML for Sign-Up Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #div1container {
+            width: 100%;
+            max-width: 450px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 40px 30px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center; 
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #3f51b5;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        input::placeholder {
+            color: #888;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: -8px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        #btn1 {
+            width: 100%;
+            padding: 14px;
+            background-color: #3f51b5;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #btn1:hover {
+            background-color: #303f9f;
+        }
+
+        #home a {
+            color: #5b63f7;
+            text-decoration: underline;
+        }
+
+        #home {
+            padding: 5px;
+            text-align: right;
+        }
+
+        @media (max-width: 400px) {
+            #div1container {
+                padding: 30px 20px;
+            }
+            h2 {
+                font-size: 30px;
+            } 
+        } 
+    </style>
+</head>
+<body>
+    <div id="div1container">
+        <h2>Sign Up</h2>
+        <form action="/signup" method="POST">
+            <input id="empid" type="text" placeholder="Enter your employee ID" required>
+            <div class="error" id="empid-error"></div>
+            <input id="name" type="text" placeholder="Enter your name" required>
+            <div class="error" id="name-error"></div>
+            <input id="mail" type="email" placeholder="Enter your email" required>
+            <div class="error" id="mail-error"></div>
+            <input id="pass" type="password" placeholder="Enter your password" required>
+            <div class="error" id="pass-error"></div>
+            <input id="cpass" type="password" placeholder="Confirm password" required>
+            <div class="error" id="cpass-error"></div>
+            <button id="btn1" type="button">SIGN UP</button>
+        </form>
+        <div id="home"><a href="login.html">Go To Home</a></div>
+    </div>
+    <!-- <script>
+        const form1 = document.querySelector('#form1');
+        form1.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            validateInputs();
+
+            if (isFormValid()) {
+                const data = new URLSearchParams();
+                data.append('email', document.getElementById('mail').value.trim());
+                data.append('password', document.getElementById('pass').value.trim());
+
+                try {
+                    const response = await fetch('http://localhost:3000/signup', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: data
+                    });
+
+                    if (response.ok) {
+                        alert("Sign-Up successful!");
+                        window.location.href = "login.html";
+                    } else {
+                        alert("Sign-Up failed! Email might already be registered.");
+                    }
+                } catch (error) {
+                    alert("Error during sign-up. Please try again.");
+                }
+            }
+        });
+
+        function validateInputs() {
+            const empidVal = empid.value.trim();
+            const nameVal = nameInput.value.trim();
+            const mailVal = mail.value.trim();
+            const passVal = pass.value.trim();
+            const cpassVal = cpass.value.trim();
+
+            if (empidVal === '') {
+                setError(empid, 'Employee ID cannot be blank', 'empid-error');
+            } else {
+                setSuccess(empid, 'empid-error');
+            }
+
+            if (nameVal === '') {
+                setError(nameInput, 'Name cannot be blank', 'name-error');
+            } else {
+                setSuccess(nameInput, 'name-error');
+            }
+
+            if (mailVal === '') {
+                setError(mail, 'Email cannot be blank', 'mail-error');
+            } else {
+                setSuccess(mail, 'mail-error');
+            }
+
+            if (passVal === '') {
+                setError(pass, 'Password cannot be blank', 'pass-error');
+            } else if (passVal.length < 8) {
+                setError(pass, 'Password must be at least 8 characters', 'pass-error');
+            } else {
+                setSuccess(pass, 'pass-error');
+            }
+
+            if (cpassVal === '') {
+                setError(cpass, 'Confirm password cannot be blank', 'cpass-error');
+            } else if (cpassVal !== passVal) {
+                setError(cpass, 'Passwords do not match', 'cpass-error');
+            } else {
+                setSuccess(cpass, 'cpass-error');
+            }
+        }
+
+        function isFormValid() {
+            // Check if all fields are validated successfully
+            return true; // Simplified for demo, replace with actual logic
+        }
+    </script> -->
+    <script>
+        const empid = document.getElementById('empid');
+        const nameInput = document.getElementById('name');
+        const mail = document.getElementById('mail');
+        const pass = document.getElementById('pass');
+        const cpass = document.getElementById('cpass');
+        const btn1 = document.getElementById('btn1');
+    
+        btn1.addEventListener('click', async (e) => {
+            e.preventDefault();
+            clearErrors();
+            validateInputs();
+    
+            if (isFormValid()) {
+                const formData = {
+                    employee_id: empid.value.trim(),
+                    username: nameInput.value.trim(),
+                    email: mail.value.trim(),
+                    password: pass.value.trim(),
+                    cpass: cpass.value.trim(), // Uncomment if needed
+                };
+    
+                try {
+                    // Send data to server
+                    const response = await fetch('http://localhost:3000/signup', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData),
+                    });
+    
+                    if (response.ok) {
+                        alert('Sign-Up successful!');
+                        window.location.href = 'login.html';
+                    } else {
+                        const errorMessage = await response.text();
+                        alert(`Sign-Up failed: ${errorMessage}`);
+                    }
+                } catch (error) {
+                    alert('Error during sign-up. Please try again later.');
+                    console.error('Error:', error);
+                }
+            }
+        });
+    
+        // Validation functions
+        function validateInputs() {
+            validateField(empid, 'Employee ID cannot be blank', 'empid-error');
+            validateField(nameInput, 'Name cannot be blank', 'name-error');
+            validateField(mail, 'Email cannot be blank', 'mail-error');
+            validatePassword(pass, 'pass-error');
+            validateConfirmPassword(cpass, pass, 'cpass-error'); // Uncomment if confirm password is needed
+        }
+    
+        function validateField(field, errorMessage, errorId) {
+            const value = field.value.trim();
+            if (value === '') {
+                setError(field, errorMessage, errorId);
+            } else {
+                setSuccess(field, errorId);
+            }
+        }
+    
+        function validatePassword(passwordField, errorId) {
+            const value = passwordField.value.trim();
+            if (value === '') {
+                setError(passwordField, 'Password cannot be blank', errorId);
+            } else if (value.length < 8) {
+                setError(passwordField, 'Password must be at least 8 characters', errorId);
+            } else {
+                setSuccess(passwordField, errorId);
+            }
+        }
+    
+        // Uncomment this function if confirm password is needed
+        function validateConfirmPassword(confirmPasswordField, passwordField, errorId) {
+            const confirmValue = confirmPasswordField.value.trim();
+            const passwordValue = passwordField.value.trim();
+            if (confirmValue === '') {
+                setError(confirmPasswordField, 'Confirm password cannot be blank', errorId);
+            } else if (confirmValue !== passwordValue) {
+                setError(confirmPasswordField, 'Passwords do not match', errorId);
+            } else {
+                setSuccess(confirmPasswordField, errorId);
+            }
+        }
+    
+        // Utility functions
+        function setError(field, message, errorId) {
+            const errorElement = document.getElementById(errorId);
+            errorElement.textContent = message;
+            field.style.borderColor = 'red';
+        }
+    
+        function setSuccess(field, errorId) {
+            const errorElement = document.getElementById(errorId);
+            errorElement.textContent = '';
+            field.style.borderColor = 'green';
+        }
+    
+        function clearErrors() {
+            document.querySelectorAll('.error').forEach((error) => {
+                error.textContent = '';
+            });
+            document.querySelectorAll('input').forEach((input) => {
+                input.style.borderColor = '#ddd';
+            });
+        }
+    
+        function isFormValid() {
+            const errors = document.querySelectorAll('.error');
+            return Array.from(errors).every((error) => error.textContent === '');
+        }
+    </script>    
+</body>
+</html>

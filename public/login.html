@@ -1,0 +1,287 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    <title>Employee Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #divContainer {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #3f51b5;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        input::placeholder {
+            color: #888;
+        }
+
+        #loginButton {
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            background-color: #3f51b5;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #loginButton:hover {
+            background-color: #303f9f;
+        }
+
+        #divForget a,
+        #divSignup a {
+            color: #3f51b5;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        #divForget {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        #divSignup {
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        #divSignup a {
+            color: #3f51b5;
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #3f51b5;
+            text-decoration: none;
+        }
+
+        @media (max-width: 400px) {
+            #divContainer {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="divContainer">
+        <h1>Employee Portal</h1>
+        <form action="" id="form">
+        <div id="divForm">
+            <input id="mail" type="email" placeholder="Enter your work email" required>
+            <input id="passw" type="password" placeholder="Enter your password" required>
+            
+            <div class="g-recaptcha" data-sitekey="6Lc_QnsqAAAAAL5AXCfA0F14oC_uyumA0ve4gGqi" data-action="LOGIN"></div>
+            
+            <button id="loginButton">Login</button>
+        </div>
+        <div id="divForget">
+            <a href="#">Forgot password?</a>
+        </div>
+        <div id="divSignup">
+            <p>New employee? <a href="signup.html">Sign Up</a></p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Company Name | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+        </form>
+    </div>
+    <script>
+        const form=document.querySelector('#form')
+        const mail=document.getElementById("mail")
+        const passw=document.getElementById("passw")
+        const loginButton=document.getElementById("loginButton")
+
+
+
+    </script>
+</body>
+</html> -->
+
+<!-- Updated HTML for Login Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login</title>
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    <style>
+        /* Your CSS styles remain unchanged */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #divContainer {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            color: #3f51b5;
+            margin-bottom: 20px;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+        }
+        #loginButton {
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            background-color: #3f51b5;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #loginButton:hover {
+            background-color: #303f9f;
+        }
+        .g-recaptcha {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="divContainer">
+        <h1>Employee Portal</h1>
+        <form id="form">
+            <input id="mail" type="email" placeholder="Enter your work email" required>
+            <input id="passw" type="password" placeholder="Enter your password" required>
+            <div id="captchaContainer" class="g-recaptcha" data-sitekey="6Lc_QnsqAAAAAL5AXCfA0F14oC_uyumA0ve4gGqi" style="display: none;"></div>
+            <button id="loginButton" type="button">Login</button>
+        </form>
+        <div id="divForget"><a href="#">Forgot password?</a></div>
+        <div id="divSignup"><p>New employee? <a href="signup.html">Sign Up</a></p></div>
+    </div>
+    <script>
+        const form = document.querySelector('#form');
+        const mail = document.getElementById("mail");
+        const passw = document.getElementById("passw");
+        const loginButton = document.getElementById("loginButton");
+        const captchaContainer = document.getElementById("captchaContainer");
+
+        let attemptsLeft = 3;
+
+        loginButton.addEventListener('click', async () => {
+            const email = mail.value.trim();
+            const password = passw.value.trim();
+            const data = new URLSearchParams();
+            data.append('email', email);
+            data.append('password', password);
+
+            if (attemptsLeft <= 0) {
+                alert("Too many attempts. Check your email for recovery instructions.");
+                return; // Stop further execution
+            }
+
+            try {
+                const response = await fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: data
+                });
+
+                if (response.ok) {
+                    alert("Login successful!");
+                    attemptsLeft = 3; // Reset attempts on successful login
+                    // Redirect to dashboard or perform next actions here
+                } else {
+                    attemptsLeft--;
+                    if (attemptsLeft > 0) {
+                        alert(`Invalid credentials. Attempts left: ${attemptsLeft}`);
+                        captchaContainer.style.display = 'block';
+                    } else {
+                        alert("Too many attempts. Check your email for recovery instructions.");
+                        sendAlertEmail(email);
+                    }
+                }
+            } catch (error) {
+                alert('Error logging in, try again later.');
+            }
+        });
+
+    </script>
+</body>
+</html>
